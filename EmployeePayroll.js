@@ -8,7 +8,7 @@ class EmployeePayrollData{
     set name(name){
         let nameRegex = RegExp("^[A-Z]{1}[a-z]{3,}$");
         if(nameRegex.test(name))
-            this.name=name;
+            this._name=name;
         else throw "Name is Invalid";    
     }
 
