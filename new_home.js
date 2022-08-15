@@ -26,11 +26,11 @@ const createInnerHtml = () => {
             <td>${employeePayrollData._gender}</td>
             <td>${getDeptHtml(employeePayrollData._department)}</td>
             <td>${employeePayrollData._salary}</td>
-            <td>${stringifyDate(employeePayrollData.date)}</td>
+            <td>${stringifyDate(employeePayrollData._startDate)}</td>
             <td>
                 <img id="${employeePayrollData._name}" onclick="remove(this)" alt="delete" 
                                                             src="./Assets/icons/delete-black-18dp.svg">
-                <img id="${employeePayrollData._id}" onclick="update(this)" alt="edit" 
+                <img id="${employeePayrollData._name}" onclick="update(this)" alt="edit" 
                                                             src="./Assets/icons/create-black-18dp.svg">
             </td>
         </tr>
@@ -57,3 +57,4 @@ const remove = (node) => {
     localStorage.setItem("EmployeePayrollList", JSON.stringify(employeePayrollList));
     createInnerHtml();                            
 }
+
